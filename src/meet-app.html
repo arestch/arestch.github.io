@@ -1,0 +1,129 @@
+<link rel="import" href="./../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./../bower_components/app-route/app-location.html">
+<link rel="import" href="./../bower_components/app-route/app-route.html">
+<link rel="import" href="./../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="./../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
+<link rel="import" href="./../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="./../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="./../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="./../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="./../bower_components/app-layout/demo/sample-content.html">
+<link rel="import" href="./../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="./meet-home.html">
+<link rel="import" href="./meet-404-warning.html">
+
+
+
+<dom-module id="meet-app">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: black;
+        --app-secondary-color: black;
+
+        display: block;
+      }
+      app-header {
+        z-index: 1;
+        color: #fff;
+        background-color: var(--app-primary-color);
+        --app-header-shadow: {
+          box-shadow: inset 0px 5px 6px -3px rgba(255, 255, 255, 1);
+          height: 10px;
+          bottom: -10px;
+        };
+      }
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+      .logo {text-align: center;
+      }
+      .logo a {
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+        font-family: 'Space Mono', Arial;
+        display: inline-block;
+      }
+      
+    </style>
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}">  
+    </app-route>
+
+    <app-drawer-layout fullbleed narrow="{{narrow}}">
+      <app-header-layout has-scrolling-region style="width: 300px; height: 400px;">
+
+        <app-header role="navigation" id="header" effects="waterfall" condenses reveals>
+          <app-toolbar>
+            <div class="logo" main-title><a href="/">meetup</a></div>
+            <paper-progress value="10" indeterminate bottom-item></paper-progress>
+          </app-toolbar>
+      </app-header>
+    </app-header-layout>
+  <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
+    <meet-home name="home"></meet-home>
+    <meet-404-warning name="404"></meet-404-warning>
+  </iron-pages>
+  
+       <footer>
+          <a href="https://www.polymer-project.org/1.0/toolbox/">Made by Polymer</a>
+          <div class="demo-label">Demo Only</div>
+       </footer>
+     <h1>123123</h1>
+    </app-drawer-layout>
+  </template>
+  
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class MeetApp extends Polymer.Element {
+      static get is() { return 'meet-app'; }
+      static get properties() {
+        return {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged'
+          },
+          prop1: {
+            type: String,
+            value: 'meet-app'
+          },
+          routeData: Object,
+          subroute: String,
+          rootPath: String
+        };
+      }
+    
+      static get observers() {
+      return [
+        '_routeChanged(routeData.page)',
+        '_viewChanged(routeData.view)'
+      ]
+    }
+
+    _routeChanged(page) {
+      this.page = page || 'home';
+      if (page.path === 'path') {
+        console.log('Path changed!');
+      }
+    }
+    _viewChanged(view) {
+      // load data for view
+    }
+    }
+
+    window.customElements.define(MeetApp.is, MeetApp);
+  </script>
+</dom-module>

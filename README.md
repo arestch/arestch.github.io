@@ -5,7 +5,7 @@
 ### Components\pages used in this application: 
 
 __meet-app.html__ - main application file which merges all other components in Single Page Application.
-Using iron-pages to create site pages and App-Route to navigate between iron-pages.
+Using [iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) to create site pages and [App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) to navigate between iron-pages.
 
 __meet-home.html__ - home page component, you can see this component on the main '/' page. Creates big slider using [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) component.
 

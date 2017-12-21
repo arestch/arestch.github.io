@@ -1,7 +1,36 @@
-{
+{	
+	"entrypoint": "index.html",
+	"shell": "src/meet-app.html",
+	"fragments": [
+    "src/meet-events.html",
+    "src/meet-facebook.html",
+    "src/meet-google.html",
+    "src/meet-registration.html",
+    "src/meet-404-warning.html",
+    "src/meet-home.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js"
+  ],
   "lint": {
     "rules": [
       "polymer-2"
     ]
-  }
+  },
+   "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
 }

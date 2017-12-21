@@ -1,4 +1,4 @@
-<link rel="import" href="./../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./../bower_components/polymer/polymer-element.html">
 <link rel="import" href="./../bower_components/app-route/app-location.html">
 <link rel="import" href="./../bower_components/app-route/app-route.html">
 <link rel="import" href="./../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
@@ -117,7 +117,7 @@
       <app-header-layout has-scrolling-region style="width: 300px; height: 400px;">
 
         <app-header role="navigation" id="header" condenses reveals>
-            <div class="logo" main-title><a href=".">meetup</a></div>
+            <div class="logo" main-title><a href="/">meetup</a></div>
             <paper-progress value="10" indeterminate bottom-item></paper-progress>
       </app-header>
     </app-header-layout>
@@ -172,9 +172,6 @@
 
     _routeChanged(page) {
       this.page = page || 'home';
-      if (page.path === 'path') {
-        console.log('Path changed!');
-      }
     }
     _isMainPage(page) {
       return (page === 'home');

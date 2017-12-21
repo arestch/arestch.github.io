@@ -1,0 +1,104 @@
+<link rel="import" href="./../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./../bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="meet-events">
+  
+  <template>
+  <style>
+      :host {
+        --app-primary-color: black;
+        --app-secondary-color: black;
+
+        display: block;
+      }
+      meet-events {
+      }
+      .coming-event {
+        width: 30%;
+        height: 320px;
+        display: inline-block;
+        margin-bottom: 5%;
+        border: 2px solid rgba(197,197,197, 0.7);
+        position: relative;
+      }
+      .coming-event__footer {
+        position: absolute;
+        height: 80px;
+        width: 100%;
+        background-color: rgba(0,0,0, 0.6);
+        bottom: 0;
+      }
+      .coming-event__image {
+        width: 100%;
+        transition: .5s ease;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      .coming-event__name {
+        text-align: center;
+        color: #fff;
+        font-family: 'Mukta Malar', sans-serif;
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 25px;
+      }
+      .coming-event__date {
+        text-align: center;
+        color: #fff;
+        font-family: 'Mukta Malar', sans-serif;
+        margin: 0;
+      }
+      .coming-event__button {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+      }
+      .coming-event:hover .coming-event__button {
+        opacity: 1;
+      }
+      .coming-event:hover .coming-event__image {
+        opacity: 0.3;
+      }
+      .coming-event__link {
+        background-color: #ff5053;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+        font-family: 'Mukta Malar', sans-serif;
+        text-transform: uppercase;
+      }
+
+    </style>
+    <template is="dom-repeat" items="{{events}}">
+        <div class="coming-event">
+        <img class="coming-event__image" src="{{item.image}}" height="320" width="480"></img>
+        <a href="{{item.link}}"><div class="coming-event__button">
+          <div class="coming-event__link">Learn More</div>
+        </div></a>
+        <div class="coming-event__footer">
+          <h2 class="coming-event__name">{{item.title}}</h2>
+          <h3 class="coming-event__date">{{item.date}}</h3>
+        </div></div>
+    </template>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'meet-events',
+      ready: function() {
+        this.events = [
+            {title: 'Google I/O', date: '11/11/17', link: './google', image: './../img/upc-1.jpg'},
+            {title: 'Facebook F8', date: '12/11/17', link: './facebook', image: './../img/upc-2.png'},
+            {title: 'Yet another Conference', date: '13/11/17', link: '.', image: './../img/upc-3.png'},
+            {title: 'Apple WWDC2017', date: '14/11/17', link: '.', image: './../img/upc-4.jpg'}
+        ];
+      }
+    });
+  </script>
+
+</dom-module>

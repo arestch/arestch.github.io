@@ -2,7 +2,7 @@
 
 ## Meet app is an app where you can see all upcoming IT Events.
 
-### Components\pages used in this application: 
+### Components/pages used in this application: 
 
 __meet-app.html__ - main application file which merges all other components in Single Page Application.
 Using [iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) to create site pages and [App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) to navigate between iron-pages.

@@ -9,9 +9,12 @@
 <link rel="import" href="./../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="./../bower_components/app-layout/demo/sample-content.html">
 <link rel="import" href="./../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="./../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="./meet-home.html">
+<link rel="import" href="./meet-events.html">
+<link rel="import" href="./meet-google.html">
+<link rel="import" href="./meet-facebook.html">
 <link rel="import" href="./meet-404-warning.html">
-
 
 
 <dom-module id="meet-app">
@@ -22,6 +25,8 @@
         --app-secondary-color: black;
 
         display: block;
+
+        animation: show 0.5s ease-out forwards;
       }
       app-header {
         z-index: 1;
@@ -29,9 +34,12 @@
         background-color: var(--app-primary-color);
         --app-header-shadow: {
           box-shadow: inset 0px 5px 6px -3px rgba(255, 255, 255, 1);
-          height: 10px;
+          height: 30px;
           bottom: -10px;
         };
+      }
+      #header {
+        height: 70px;
       }
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
@@ -44,9 +52,55 @@
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1px;
+        margin-top: 1%;
         color: #fff;
         font-family: 'Space Mono', Arial;
         display: inline-block;
+      }
+      .footer {
+        width: 100%;
+        background-color: black;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        border-top: 2px solid #ff5053;
+
+      }
+      .footer-text {
+       font-family: 'Space Mono', Arial;
+       color: #fff;
+       position: absolute;
+       right: 5%;
+       top: 35%;
+      }
+      .upcoming-events {
+        margin-top: 6%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: ;
+      }
+      .events-title {
+        margin-top: 5%;
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Mukta Malar', sans-serif;
+
+      }
+      
+      @keyframes show {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
       
     </style>
@@ -61,32 +115,32 @@
     <app-drawer-layout fullbleed narrow="{{narrow}}">
       <app-header-layout has-scrolling-region style="width: 300px; height: 400px;">
 
-        <app-header role="navigation" id="header" effects="waterfall" condenses reveals>
-          <app-toolbar>
+        <app-header role="navigation" id="header" condenses reveals>
             <div class="logo" main-title><a href="/">meetup</a></div>
             <paper-progress value="10" indeterminate bottom-item></paper-progress>
-          </app-toolbar>
       </app-header>
     </app-header-layout>
   <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
     <meet-home name="home"></meet-home>
+    <meet-google name="google"></meet-google>
+    <meet-facebook name="facebook"></meet-facebook>
     <meet-404-warning name="404"></meet-404-warning>
   </iron-pages>
-  
-       <footer>
-          <a href="https://www.polymer-project.org/1.0/toolbox/">Made by Polymer</a>
-          <div class="demo-label">Demo Only</div>
+  <template is="dom-if" if="[[_isMainPage(page)]]">
+  <h1 class="events-title">UPCOMING EVENTS</h1>
+  <meet-events class="upcoming-events">
+  </meet-events>
+         <footer>
+          <div class="footer">
+            <span class="footer-text">MEETUP 2017</span>
+          </div>
        </footer>
-     <h1>123123</h1>
     </app-drawer-layout>
   </template>
-  
+  </template>
 
   <script>
-    /**
-     * @customElement
-     * @polymer
-     */
+  
     class MeetApp extends Polymer.Element {
       static get is() { return 'meet-app'; }
       static get properties() {
@@ -105,6 +159,7 @@
           rootPath: String
         };
       }
+
     
       static get observers() {
       return [
@@ -118,6 +173,9 @@
       if (page.path === 'path') {
         console.log('Path changed!');
       }
+    }
+    _isMainPage(page) {
+      return (page === 'home');
     }
     _viewChanged(view) {
       // load data for view

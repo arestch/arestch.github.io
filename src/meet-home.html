@@ -1,12 +1,13 @@
 
 <link rel="import" href="./../bower_components/polymer/polymer-element.html">
 <link rel="import" href="./../bower_components/skeleton-carousel/skeleton-carousel.html">
+<link rel="import" href="./meet-button.html">
 
 
 
 <dom-module id="meet-home">
   <template>
-  	<style>
+  	<style include="meet-button">
       :host {
         display: block;
         text-align: center;
@@ -66,76 +67,24 @@
 				margin-left: 37%;
 				margin-bottom: 270px;
 			}
-			.button {
-		    display: inline-block;
-		    border: none;
-		    color: #555;
-		    text-decoration: none;
-		    background-color: #fff;
-		    padding: 25px 45px;
-		    font-size: 13px;
-		    text-transform: uppercase;
-		    font-weight: 600;
-		    letter-spacing: 3px;
-		    border-radius: 2px;
-		    width: 10%;
-		    text-align: center;
-		    position: relative;
-		    outline: none;
-		    transition: background-color .1s ease;
-		    cursor: pointer;
-		    margin: auto;
+			meet-button {
+
 		    position: absolute;
 		    bottom: 10%;
 		   	left: 50%;
-		   	margin-left: -5%;
-		}
-
-		.button::after {
-		    transition: background-color .2s ease;
-		    position: absolute;
-		    content: '';
-		    height: 4px;
-		    bottom: 0;
-		    width: 10%;
-		    background-color: gray;
-		    opacity: .18;
-		    border-bottom-left-radius: 2px;
-		    border-bottom-right-radius: 2px;
-		    left: 0;
-		}
-
-		.button:focus, .button:hover {
-		    text-decoration: none;
-		    color: #000;
-		}
-
-		.button:hover {
-		    background-color: white;
-		}
-
-		.button:hover::after {
-		    opacity: .22;
-		}
-
-		.button:active {
-		    background-color: lightblue;
-		}
-
-		.button:active::after {
-		    opacity: .32;
-		}
+		   	margin-left: -7%;
+			}
 
     </style>
-  <skeleton-carousel dots nav loop>
+  <skeleton-carousel dots nav loop auto>
 		<div class="event event-google">
 			<img src="./../img/google-logo.png" alt="logo-google" class="event__logo   event__logo--google"></img>
-			<a href="/meet-facebook"><button class="button">See More</button></a>
+			<a href="/google"><meet-button>See More</meet-button></a>
 		</div>
 		<div class="event event-facebook">
 						<img src="./../img/facebook-logo.png" alt="logo-facebook" class="event__logo"></img>
-
-						<a href="/meet-facebook"><button class="button">See More</button></a>
+						<meet-button></meet-button>
+						<a href="/facebook"><meet-button>See More</meet-button></a>
 		</div>
 </skeleton-carousel>
   </template>

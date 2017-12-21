@@ -12,21 +12,18 @@
         color: var(--app-secondary-color);
       }
       .bg-wrapper {
+
+        width: 60%;
       	height: 100%;
       	background-color: rgba(0,0,0, 0.8);
         animation: show 0.3s ease-out forwards;
+        margin-left: 20%;
 
       }
       .meet-google {
-      	width: 60%;
-      	border-right: 2px solid #ff5053;
-      	border-left: 2px solid #ff5053;
 				background: url(./../img/bg-repeat.jpg) repeat;
-      	margin-left: 20%;
       	height: 100%;
       	font-family: 'Mukta Malar', sans-serif;
-      	margin-top: -1.5%;
-      	z-index: 5;
       }
       .meet-google__header {
       	width: 100%;
@@ -56,6 +53,7 @@
       	padding-top: 2%;
       	text-align: left;
       	margin-left: 5%;
+        background: none;
       }
       .meet-google__info-text {
       	text-align: left;
@@ -64,6 +62,7 @@
       	margin-bottom: 0;
       	font-size: 18px;
       	padding-bottom: 2%;
+        background: none;
       }
       .meet-google__info-block {
       	background: url(./../img/google-info-1.jpg) no-repeat;
@@ -128,6 +127,8 @@
       meet-button {
       	margin-top: 2%;
       	margin-bottom: 4%;
+        z-index: 25;
+        border: 1px solid white;
       }
       .meet-google__title--come {
        	border-top: 2px solid #ff5053;
@@ -161,7 +162,8 @@
 					<p class="meet-google__info-text">Shoreline Amphitheatre Mountain View, California </p>
 					</div>
 				<h1 class="meet-google__title meet-google__title--come">wanna come?</h1>
-				<a href="./registration"><meet-button>Registration</meet-button></a>
+				<div class="meet-google__footer">
+        <a href="./registration"><meet-button>Registration</meet-button></a></div>
 			</section>
     </article>
 	</div>

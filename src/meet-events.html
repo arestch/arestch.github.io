@@ -71,14 +71,7 @@
         font-family: 'Mukta Malar', sans-serif;
         text-transform: uppercase;
       }
-        @keyframes show {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
+
     </style>
     <template is="dom-repeat" items="{{events}}">
         <div class="coming-event">
@@ -99,10 +92,10 @@
       is: 'meet-events',
       ready: function() {
         this.events = [
-            {title: 'Google I/O', date: '11/11/17', link: 'google', image: './../img/upc-1.jpg'},
-            {title: 'Facebook F8', date: '12/11/17', link: 'facebook', image: './../img/upc-2.png'},
-            {title: 'Yet another Conference', date: '13/11/17', link: '/', image: './../img/upc-3.png'},
-            {title: 'Apple WWDC2017', date: '14/11/17', link: '/', image: './../img/upc-4.jpg'}
+            {title: 'Google I/O', date: '11/11/17', link: './google', image: './../img/upc-1.jpg'},
+            {title: 'Facebook F8', date: '12/11/17', link: './facebook', image: './../img/upc-2.png'},
+            {title: 'Yet another Conference', date: '13/11/17', link: '.', image: './../img/upc-3.png'},
+            {title: 'Apple WWDC2017', date: '14/11/17', link: '.', image: './../img/upc-4.jpg'}
         ];
       }
     });

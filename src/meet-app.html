@@ -14,6 +14,7 @@
 <link rel="import" href="./meet-events.html">
 <link rel="import" href="./meet-google.html">
 <link rel="import" href="./meet-facebook.html">
+<link rel="import" href="./meet-registration.html">
 <link rel="import" href="./meet-404-warning.html">
 
 
@@ -93,7 +94,7 @@
         font-family: 'Mukta Malar', sans-serif;
 
       }
-      
+
       @keyframes show {
         from {
           opacity: 0;
@@ -116,13 +117,14 @@
       <app-header-layout has-scrolling-region style="width: 300px; height: 400px;">
 
         <app-header role="navigation" id="header" condenses reveals>
-            <div class="logo" main-title><a href="/">meetup</a></div>
+            <div class="logo" main-title><a href=".">meetup</a></div>
             <paper-progress value="10" indeterminate bottom-item></paper-progress>
       </app-header>
     </app-header-layout>
   <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
     <meet-home name="home"></meet-home>
     <meet-google name="google"></meet-google>
+    <meet-registration name="registration"></meet-registration>
     <meet-facebook name="facebook"></meet-facebook>
     <meet-404-warning name="404"></meet-404-warning>
   </iron-pages>

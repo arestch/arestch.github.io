@@ -28,7 +28,6 @@
         --app-secondary-color: black;
 
         display: block;
-
         animation: show 0.5s ease-out forwards;
       }
       app-header {
@@ -64,11 +63,8 @@
         width: 100%;
         background-color: black;
         height: 60px;
-        margin: 0;
-        padding: 0;
-        position: relative;
         border-top: 2px solid #ff5053;
-
+        position: relative;
       }
       .footer-text {
        font-family: 'Space Mono', Arial;
@@ -96,7 +92,6 @@
         font-family: 'Mukta Malar', sans-serif;
 
       }
-
       @keyframes show {
         from {
           opacity: 0;
@@ -105,7 +100,6 @@
           opacity: 1;
         }
       }
-      
     </style>
     <app-location route="{{route}}"></app-location>
     <app-route
@@ -117,32 +111,32 @@
 
     <app-drawer-layout fullbleed narrow="{{narrow}}">
       <app-header-layout has-scrolling-region style="width: 300px; height: 400px;">
-
         <app-header role="navigation" id="header" condenses reveals>
             <div class="logo" main-title><a href="/">meetup</a></div>
             <paper-progress value="10" indeterminate bottom-item></paper-progress>
       </app-header>
     </app-header-layout>
-  <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
-    <meet-home name="home"></meet-home>
-    <meet-google name="google"></meet-google>
-    <meet-registration name="registration"></meet-registration>
-    <meet-facebook name="facebook"></meet-facebook>
-    <meet-404-warning name="404"></meet-404-warning>
-  </iron-pages>
-  <template is="dom-if" if="[[_isMainPage(page)]]">
-  <h1 class="events-title">UPCOMING EVENTS</h1>
-  <meet-events class="upcoming-events">
-  </meet-events>
-         <footer>
-          <div class="footer">
-            <span class="footer-text">MEETUP 2017</span>
-          </div>
-       </footer>
+
+      <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
+        <meet-home name="home"></meet-home>
+        <meet-google name="google"></meet-google>
+        <meet-registration name="registration"></meet-registration>
+        <meet-facebook name="facebook"></meet-facebook>
+        <meet-404-warning name="404"></meet-404-warning>
+      </iron-pages>
+
+      <template is="dom-if" if="[[_isMainPage(page)]]">
+        <h1 class="events-title">UPCOMING EVENTS</h1>
+        <meet-events class="upcoming-events">
+        </meet-events>
+      <footer>
+        <div class="footer">
+         <span class="footer-text">MEETUP 2017</span>
+        </div>
+      </footer>
+      </template>
     </app-drawer-layout>
   </template>
-  </template>
-
   <script>
   
     class MeetApp extends Polymer.Element {
@@ -154,37 +148,24 @@
             reflectToAttribute: true,
             observer: '_pageChanged'
           },
-          prop1: {
-            type: String,
-            value: 'meet-app'
-          },
           routeData: Object,
           subroute: String,
           rootPath: String
         };
       }
-
-    
       static get observers() {
       return [
         '_routeChanged(routeData.page)',
-        '_viewChanged(routeData.view)'
       ]
     }
-
     _routeChanged(page) {
       this.page = page || 'home';
     }
     _isMainPage(page) {
-      console.log(page);
       return (page === 'home');
-    }
-    _viewChanged(view) {
-      // load data for view
     }
     _pageChanged(page) {
         let resolvedPageUrl = this.resolveUrl('meet-' + page + '.html');
-        console.log(resolvedPageUrl);
         Polymer.importHref(
             resolvedPageUrl,
             null,

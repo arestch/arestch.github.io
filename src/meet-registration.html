@@ -1,15 +1,18 @@
 <link rel="import" href="./../bower_components/polymer/polymer-element.html">
 <link rel="import" href="./../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="./../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="./../bower_components/iron-form/iron-form.html">
 <link rel="import" href="./../bower_components/paper-input/paper-input.html">
 <link rel="import" href="./../bower_components/paper-input/paper-button.html">
 <link rel="import" href="./../bower_components/paper-checkbox/paper-checkbox.html">
 
-<link rel="import" href="./../bower_components/iron-form/iron-form.html">
+<link rel="import" href="./meet-regfield.html">
+
+
 
 <dom-module id="meet-registration">
   <template>
-    <style>
+    <style include="meet-button2">
 
       :host {
         display: block;
@@ -39,55 +42,20 @@
         justify-content: flex-start
         align-items: flex-start;
       }
-      
       .meet-registration__registration {
         border: none;
-        text-align: center;
-        margin-left: 0;
       }
-
       .meet-registration__form-title {
         text-align: center;
         font-family: 'Mukta Malar', sans-serif;
         text-transform: uppercase;
         font-size: 25px;
       }
-      .meet-registration__input {
-        display: inline-block;
-        border: none;
-        height: 30px;
-        padding-left: 10px;
-        opacity: 0.8;
-        width: 165px;
-        margin-left: 0;
-      }
-      .meet-registration__main-info {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
       .meet-registration__main-info {
         padding-bottom: 30px;
         border: 1px solid #c5c5c5;
         border-top: none;
       }
-      .submit-button {
-        border: none;
-        font-family: 'Mukta Malar', sans-serif;
-        text-transform: uppercase;
-        height: 50px;
-        width: 100px;
-        border: 1px solid rgba(0,0,0, 0.3);
-        background-color: lightblue;
-        cursor: pointer;
-        padding: 10px;
-        padding-right: 40px;
-        padding-left: 40px;
-              }
       .arrow {
         display: inline-block;
         height: 34px;
@@ -101,47 +69,20 @@
       }
       .arrow:hover {
         opacity: 0.6;
-              }
-      paper-input {
-        display: block;
-        width: 30%;
-        margin: auto;
-      }
-      .checkbox {
-        margin-top: 1%;
-        margin-bottom: 2%;
-      }
+        }
     </style>
 
     <article class="meet-registration">
       <section class="meet-registration__header">
-      <iron-icon icon="icons:arrow-back" on-click="_goBack" class="arrow"></iron-icon>
-      <h1 class="meet-registration__title">Meetup</h1></section>
-      <section class="meet-registration__main-info">
-
-    <fieldset class="meet-registration__registration">
-      <legend class="meet-registration__form-title" id="id1">
-       Want to visit us? Sign up here.
-      </legend>
-      </fieldset>
-   <iron-form id="register-form" allow-redirect>
-      <form action="https://httpbin.org/post" method="post" >
-        <paper-input label="Login" name="login" required auto-validate pattern="[a-zA-Z0-9]{4,}" error-message="Must contain at least 4 symbols!">
-        </paper-input>
-        <paper-input label="Password" type="password" required name="password" auto-validate pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" error-message="8+ characters, at least one number and one uppercase">
-        </paper-input>
-        <paper-input label="First Name" name="first-name" required auto-validate pattern="[a-zA-ZА-Я]{1,}" error-message="Must contain only letters">
-        </paper-input>
-        <paper-input label="Last Name" name="last-name" required auto-validate pattern="[a-zA-ZА-Я]{1,}" error-message="Must contain only letters">
-        </paper-input>
-        <paper-input label="Email" name="email" required auto-validate pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" error-message="Example: foo@bar.com">
-        </paper-input>
-        <paper-checkbox name="spam" value="yes" checked class="checkbox"'>I want to receive spam</paper-checkbox>
-      </form>
-       <paper-button class="submit-button" raised on-click="_submitForm">Submit</paper-button>
-    </iron-form>
-       
-      </form>
+        <iron-icon icon="icons:arrow-back" on-click="_goBack" class="arrow"></iron-icon>
+        <h1 class="meet-registration__title">Meetup</h1></section>
+        <section class="meet-registration__main-info">
+          <fieldset class="meet-registration__registration">
+            <legend class="meet-registration__form-title" id="id1">
+             Want to visit us? Sign up here.
+            </legend>
+          </fieldset>
+        <meet-regfield></meet-regfield>
       </section>
     </article>
   </template>
@@ -152,9 +93,6 @@
 
       _goBack() {
           window.history.back();
-      }
-       _submitForm() {
-        Polymer.dom(this.root).querySelector("#register-form").submit();
       }
     }
 

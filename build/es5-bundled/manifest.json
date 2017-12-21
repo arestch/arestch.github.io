@@ -1,0 +1,6 @@
+{
+  "name": "meet",
+  "short_name": "meet",
+  "start_url": "/",
+  "display": "standalone"
+}

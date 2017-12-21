@@ -1,0 +1,34 @@
+{
+  "src/meet-app.html": {
+    "src/meet-home.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/meet-events.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/meet-google.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/meet-facebook.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/meet-registration.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/meet-404-warning.html": {
+      "type": "document",
+      "weight": 1
+    }
+  },
+  "src/meet-events.html": {},
+  "src/meet-facebook.html": {},
+  "src/meet-google.html": {},
+  "src/meet-registration.html": {},
+  "src/meet-404-warning.html": {},
+  "src/meet-home.html": {}
+}

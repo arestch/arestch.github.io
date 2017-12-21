@@ -10,12 +10,14 @@
 <link rel="import" href="./../bower_components/app-layout/demo/sample-content.html">
 <link rel="import" href="./../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="./../bower_components/polymer/lib/elements/dom-repeat.html">
-<link rel="import" href="./meet-home.html"><!-- 
-<link rel="import" href="./meet-events.html">
+<!-- <link rel="import" href="./meet-home.html">
+
 <link rel="import" href="./meet-google.html">
 <link rel="import" href="./meet-facebook.html">
 <link rel="import" href="./meet-registration.html">
 <link rel="import" href="./meet-404-warning.html"> -->
+
+<link rel="import" href="./meet-events.html">
 
 
 <dom-module id="meet-app">
@@ -174,6 +176,7 @@
       this.page = page || 'home';
     }
     _isMainPage(page) {
+      console.log(page);
       return (page === 'home');
     }
     _viewChanged(view) {

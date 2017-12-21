@@ -7,9 +7,9 @@
 __meet-app.html__ - main application file which merges all other components in Single Page Application.
 Using iron-pages to create site pages and App-Route to navigate between iron-pages.
 
-__meet-home.html__ - home page component, you can see him on the main '/' page. Creates big slider using [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) component.
+__meet-home.html__ - home page component, you can see this component on the main '/' page. Creates big slider using [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) component.
 
-__meet-events.html__ - home page component, you can see him on the main '/' page. Creates a list of items(upcoming events) using [dom-repeat](https://www.polymer-project.org/2.0/docs/api/elements/Polymer.DomRepeat).
+__meet-events.html__ - home page component, you can see this component on the main '/' page. Creates a list of items(upcoming events) using [dom-repeat](https://www.polymer-project.org/2.0/docs/api/elements/Polymer.DomRepeat).
 Number of items based on Polymer Object which contains data.
 
 __meet-google.html/meet-facebook.html__ - events pages with some info about events and link for Register.
@@ -18,7 +18,7 @@ __meet-registration.html__ - page with registration form with HTTP POST method t
 
 __meet-404-warning.html__ - 404 Page, you can see this page every time you follow incorrect url.
 
-__meet-button.html__ - button component, creates stylized button
+__meet-button.html__ - button component, creates stylized button, used in __meet-home.html__ , __meet-google.html/meet-facebook.html__ 
 
 
 

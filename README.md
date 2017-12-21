@@ -14,13 +14,16 @@ Number of items based on Polymer Object which contains data.
 
 __meet-google.html/meet-facebook.html__ - events pages with some info about events and link for Register.
 
-__meet-registration.html__ - page with registration form with HTTP POST method that sends data to the [server](https://httpbin.org).
-Page using [paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input), [iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form), [paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) and
-[paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) components for registration form.
+__meet-registration.html__ - registration page with __meet-regfield.html__ component that creates registration field
 
 __meet-404-warning.html__ - 404 Page, you can see this page every time you follow incorrect url.
 
-__meet-button.html__ - button component, creates stylized button, used in __meet-home.html__ , __meet-google.html/meet-facebook.html__ 
+__meet-button.html__ - button component, creates stylized button, used in __meet-home.html__ , __meet-google.html/meet-facebook.html__
+
+__meet-regfield.html__ - Registration field component, creates stylized & configured registration field with POST method that send data to the [server](https://httpbin.org), used in __meet-registration.html__
+Component using [paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input), [iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form), [paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) and
+[paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) components for registration form.
+
 
 
 

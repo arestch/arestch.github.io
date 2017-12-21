@@ -1,4 +1,4 @@
-# \<meet\>
+# \Meet App\
 
 ##Meet app is an app where you can see all upcoming IT Events.
 

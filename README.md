@@ -56,4 +56,4 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 
 [paper-icon-button](https://www.webcomponents.org/element/PolymerElements/paper-icon-button) - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency.
 
-[iron-icons](https://www.webcomponents.org/element/PolymerElements/iron-icons/elements/iron-icons)  - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency & used with [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon).the 
+[iron-icons](https://www.webcomponents.org/element/PolymerElements/iron-icons/elements/iron-icons)  - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency & used with the [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon).

@@ -4,8 +4,11 @@
 
 ### App structure
 The main page (https://arestch.github.io/) contains header(created using [app-layout](https://www.webcomponents.org/element/PolymerElements/app-layout)), big slider section (__meet-home.html__) and list of upcoming events(__meet-events.html__).
+
 You can navigate to the event page with button in the slider\on the event image in the "UPCOMING EVENTS" section.
+
 Event page (/google or /facebook) contains some information about event and button leading to the registration page.
+
 Registration page contains registration form. The ​registration ​form data submitted to a httbin.org using POST method.
 
 
@@ -49,7 +52,7 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 
 [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon) - used to create icons.
 
-[skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) - used for slider in __meet-home.html__
+[skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) - used for the slider in __meet-home.html__
 
 [paper-icon-button](https://www.webcomponents.org/element/PolymerElements/paper-icon-button) - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency.
 

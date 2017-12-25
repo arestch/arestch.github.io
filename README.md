@@ -32,7 +32,7 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 [paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) components for registration form.
 
 ### Technologies used:
-[<dom-repeat>](https://www.polymer-project.org/2.0/docs/api/elements/Polymer.DomRepeat) - used in __meet-events__ for creating a list of upcoming events(items). Items is taken from the built-in object but it can be moved in json file aswell.
+[dom-repeat](https://www.polymer-project.org/2.0/docs/api/elements/Polymer.DomRepeat) - used in __meet-events__ for creating a list of upcoming events(items). Items is taken from the built-in object but it can be moved in json file aswell.
 
 ### WebComponents used in this application:
 [App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) - used for navigation between pages in __meet-app.html__ 

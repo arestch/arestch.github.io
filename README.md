@@ -25,7 +25,7 @@ __meet-registration.html__ - registration page with __meet-regfield.html__ compo
 
 __meet-404-warning.html__ - 404 Page, you can see this page every time you follow incorrect url.
 
-__meet-button.html__ - button component, creates stylized button, used in __meet-home.html__ , __meet-google.html/meet-facebook.html__
+__meet-button.html__ - button component, creates stylized button, used in __meet-home.html__ __meet-google.html/meet-facebook.html__
 
 __meet-regfield.html__ - Registration field component, creates stylized & configured registration field with POST method that send data to the [server](https://httpbin.org), used in __meet-registration.html__
 Component using [paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input), [iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form), [paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) and
@@ -36,12 +36,21 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 
 ### WebComponents used in this application:
 [App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) - used for navigation between pages in __meet-app.html__ 
-[iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) - used for navigation between pages in __meet-app.html__ 
+
+[iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) - used for navigation between pages in __meet-app.html__
+
 [paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input) - used for registration form in __meet-regfield.html__
+
 [paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) - used for registration form in __meet-regfield.html__
+
 [paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) - used for registration form in __meet-regfield.html__
+
 [iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form) - used for registration form in __meet-regfield.html__
+
 [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon) - used to create icons.
+
 [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) - used for slider in __meet-home.html__
+
 [paper-icon-button](https://www.webcomponents.org/element/PolymerElements/paper-icon-button) - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency.
+
 [iron-icons](https://www.webcomponents.org/element/PolymerElements/iron-icons/elements/iron-icons)  - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency & need for [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon).

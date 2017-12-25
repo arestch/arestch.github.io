@@ -35,17 +35,17 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 [dom-repeat](https://www.polymer-project.org/2.0/docs/api/elements/Polymer.DomRepeat) - used in __meet-events__ for creating a list of upcoming events(items). Items is taken from the built-in object but it can be moved in json file aswell.
 
 ### WebComponents used in this application:
-[App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) - used for navigation between pages in __meet-app.html__ 
+[App-Route](https://www.webcomponents.org/element/PolymerElements/app-route) - used for the navigation between pages in __meet-app.html__ 
 
-[iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) - used for navigation between pages in __meet-app.html__
+[iron-pages](https://www.webcomponents.org/element/PolymerElements/iron-pages) - used for the navigation between pages in __meet-app.html__
 
-[paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input) - used for registration form in __meet-regfield.html__
+[paper-input](https://www.webcomponents.org/element/PolymerElements/paper-input) - used for the registration form in __meet-regfield.html__
 
-[paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) - used for registration form in __meet-regfield.html__
+[paper-checkbox](https://www.webcomponents.org/element/PolymerElements/paper-checkbox) - used for the registration form in __meet-regfield.html__
 
-[paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) - used for registration form in __meet-regfield.html__
+[paper-button](https://www.webcomponents.org/element/PolymerElements/paper-button) - used for the registration form in __meet-regfield.html__
 
-[iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form) - used for registration form in __meet-regfield.html__
+[iron-form](https://www.webcomponents.org/element/PolymerElements/iron-form) - used for the registration form in __meet-regfield.html__
 
 [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon) - used to create icons.
 
@@ -53,4 +53,4 @@ Component using [paper-input](https://www.webcomponents.org/element/PolymerEleme
 
 [paper-icon-button](https://www.webcomponents.org/element/PolymerElements/paper-icon-button) - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency.
 
-[iron-icons](https://www.webcomponents.org/element/PolymerElements/iron-icons/elements/iron-icons)  - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency & need for [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon).
+[iron-icons](https://www.webcomponents.org/element/PolymerElements/iron-icons/elements/iron-icons)  - [skeleton-carousel](https://www.webcomponents.org/element/FabricElements/skeleton-carousel) dependency & used with [iron-icon](https://www.webcomponents.org/element/PolymerElements/iron-icon).the 

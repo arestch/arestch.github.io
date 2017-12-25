@@ -5,7 +5,7 @@
 ### App structure
 The main page (https://arestch.github.io/) contains header(created using [app-layout](https://www.webcomponents.org/element/PolymerElements/app-layout)), big slider section (__meet-home.html__) and list of upcoming events(__meet-events.html__).
 
-You can navigate to the event page with button in the slider\on the event image in the "UPCOMING EVENTS" section.
+You can navigate to the event page with button in the slider/on the event image in the "UPCOMING EVENTS" section.
 
 Event page (/google or /facebook) contains some information about event and button leading to the registration page.
 
